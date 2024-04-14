@@ -26,10 +26,10 @@ def step_impl(context):
     element.click()
 
 
-@then(u'I should see the message "Success"')
+@then('I should see the message "Success"')
 def step_impl(context):
     element = context.driver.find_element(By.ID, 'flash_message')
-    assert "Success" in element.txt
+    assert "Success" in element.text
 
 
 @then('I should see "Fido" in the results')
